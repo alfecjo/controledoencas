@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container">
+      <form (ngSubmit)="cadastrar()">
+        <div>
+          <label for="doenca">Doença</label>
+          <input type="text" id="doenca" [(ngModel)]="doenca" name="doenca" />
+        </div>
+        <div>
+          <label for="contagio">Contágio</label>
+          <input
+            type="text"
+            id="contagio"
+            [(ngModel)]="contagio"
+            name="contagio"
+          />
+        </div>
+        <div>
+          <label for="leva_a_obito">Leva a óbito</label>
+          <input
+            type="text"
+            id="leva_a_obito"
+            [(ngModel)]="leva_a_obito"
+            name="leva_a_obito"
+          />
+        </div>
+        <div>
+          <label for="socorro">Primeiros socorros</label>
+          <input
+            type="text"
+            id="Socorro"
+            [(ngModel)]="socorro"
+            name="socorro"
+          />
+        </div>
+        <div>
+          <label for="medicamento">Medicamentos administrados</label>
+          <input
+            type="text"
+            id="Medicamento"
+            [(ngModel)]="medicamento"
+            name="medicamento"
+          />
+        </div>
+        <div>
+          <label for="localidade">Localidade</label>
+          <input
+            type="text"
+            id="Localidade"
+            [(ngModel)]="localidade"
+            name="localidade"
+          />
+        </div>
+        <div>
+          <button id="cadastrar" type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
