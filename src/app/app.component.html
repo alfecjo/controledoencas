@@ -1,3 +1,11 @@
 <!DOCTYPE html>
-<app-cadastro (aocadastrar)="cadastro($event)"></app-cadastro>
-<app-display [dados]="dados"></app-display>
+<header>
+  <app-cabecalho></app-cabecalho>
+</header>
+<main>
+  <app-cadastro (aocadastrar)="cadastro($event)"></app-cadastro>
+  <app-display [dados]="dados"></app-display>
+</main>
+<footer>
+  <app-rodape></app-rodape>
+</footer>
