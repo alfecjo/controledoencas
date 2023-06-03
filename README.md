@@ -1,5 +1,9 @@
 # ControleDoencasApp
 
+Figma:
+Informar o link compartilhável para o referido projeto no README.md do repositório:
+  \src\assets\controle_doencas_figma\controleDoencas.fig
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server
