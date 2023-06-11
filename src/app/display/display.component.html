@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>Doença: {{ dados?.doenca }}</p>
-    <p>Forma de contágio: {{ dados?.contagio }}</p>
-    <p>Pode levar a óbito: {{ dados?.leva_a_obito }}</p>
-    <p>Primeiros socorros: {{ dados?.socorro }}</p>
-    <p>Medicamentos administrados: {{ dados?.medicamento }}</p>
-    <p>Localidade: {{ dados?.localidade }}</p>
-  </body>
-</html>
+<section class="container">
+  <h3 class="titulo">Controle de Doenças</h3>
+  <table class="tabela">
+    <thead class="tabela__cabecalho">
+      <th class="tabela__cabecalho__conteudo">Doença</th>
+      <th class="tabela__cabecalho__conteudo">Tipo de contágio:</th>
+      <th class="tabela__cabecalho__conteudo">Pode levar a óbito:</th>
+      <th class="tabela__cabecalho__conteudo">Ação para primeiros socorros:</th>
+      <th class="tabela__cabecalho__conteudo">Medicamentos utilizados:</th>
+      <th class="tabela__cabecalho__conteudo">Localidade</th>
+      <th class="tabela__cabecalho__conteudo">Data</th>
+    </thead>
+    <tbody *ngIf="ocorrencias?.length != 0; else semocorrencias">
+      <tr class="tabela__linha" *ngFor="let ocorrencia of ocorrencias">
+        <td class="tabela__conteudo">{{ ocorrencia?.doenca }}</td>
+        <td class="tabela__conteudo">{{ ocorrencia?.contagio }}</td>
+        <td class="tabela__conteudo">{{ ocorrencia?.leva_a_obito }}</td>
+        <td class="tabela__conteudo">{{ ocorrencia?.socorro }}</td>
+        <td class="tabela__conteudo">{{ ocorrencia?.medicamento }}</td>
+        <td class="tabela__conteudo">{{ ocorrencia?.localidade }}</td>
+        <td class="tabela__conteudo">
+          {{ ocorrencia?.data | date : "short" }}
+        </td>
+        <td class="tabela__conteudo">
+          <button (click)="alterar(ocorrencia?.id)">
+            <img
+              src="assets/imagens/pen.png"
+              alt="note"
+              style="width: 20px; height: 20px"
+            />
+          </button>
+        </td>
+        <td class="tabela__conteudo">
+          <button (click)="openConfirmationDialog(ocorrencia?.id)">
+            <img
+              src="assets/imagens/lixeira.png"
+              alt="lixeira"
+              style="width: 20px; height: 20px"
+            />
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #semocorrencias>
+    <p>Sem ocorrências</p>
+  </ng-template>
+</section>

@@ -4,62 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Controle de doenças</title>
   </head>
   <body>
     <section class="container">
-      <form (ngSubmit)="cadastrar()">
-        <div>
-          <label for="doenca">Doença</label>
-          <input type="text" id="doenca" [(ngModel)]="doenca" name="doenca" />
-        </div>
-        <div>
-          <label for="contagio">Contágio</label>
+      <form class="formulario" (ngSubmit)="cadastrar()">
+        <h2 class="formulario__titulo">Cadastro</h2>
+        <div class="form-field">
+          <label class="form-field__label" for="doenca">Doença:</label>
           <input
+            class="form-field__input"
+            type="text"
+            id="doenca"
+            [(ngModel)]="doenca"
+            name="doenca"
+          />
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="contagio"
+            >Tipo de contágio:</label
+          >
+          <input
+            class="form-field__input"
             type="text"
             id="contagio"
             [(ngModel)]="contagio"
             name="contagio"
           />
         </div>
-        <div>
-          <label for="leva_a_obito">Leva a óbito</label>
+        <div class="form-field">
+          <label class="form-field__label" for="leva_a_obito"
+            >Pode levar a óbito:</label
+          >
           <input
+            class="form-field__input"
             type="text"
             id="leva_a_obito"
             [(ngModel)]="leva_a_obito"
             name="leva_a_obito"
           />
         </div>
-        <div>
-          <label for="socorro">Primeiros socorros</label>
+        <div class="form-field">
+          <label class="form-field__label" for="socorro"
+            >Ação para primeiros socorros:</label
+          >
           <input
+            class="form-field__input"
             type="text"
             id="Socorro"
             [(ngModel)]="socorro"
             name="socorro"
           />
         </div>
-        <div>
-          <label for="medicamento">Medicamentos administrados</label>
+        <div class="form-field">
+          <label class="form-field__label" for="medicamento"
+            >Medicamentos utilizados:</label
+          >
           <input
+            class="form-field__input"
             type="text"
             id="Medicamento"
             [(ngModel)]="medicamento"
             name="medicamento"
           />
         </div>
-        <div>
-          <label for="localidade">Localidade</label>
+        <div class="form-field">
+          <label class="form-field__label" for="localidade">Localidade:</label>
           <input
+            class="form-field__input"
             type="text"
             id="Localidade"
             [(ngModel)]="localidade"
             name="localidade"
           />
         </div>
-        <div>
-          <button id="cadastrar" type="submit">Cadastrar</button>
+        <div class="botao-wrapper">
+          <button class="botao" id="cadastrar" type="submit">Cadastrar</button>
         </div>
       </form>
     </section>

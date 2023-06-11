@@ -1,0 +1,44 @@
+{
+  "cadastrados": [
+    {
+      "doenca": "gripe",
+      "contagio": "vírus da gripe",
+      "leva_a_obito": "sim",
+      "socorro": "evitar friagem",
+      "medicamento": "antibióticos",
+      "localidade": "São Paulo - Cantareira",
+      "data": "2023-06-07T23:10:50.643Z",
+      "id": 1
+    },
+    {
+      "doenca": "aaa",
+      "contagio": "bbb",
+      "leva_a_obito": "ccc",
+      "socorro": "ddd",
+      "medicamento": "eee",
+      "localidade": "fff",
+      "data": "2023-06-09T20:17:17.271Z",
+      "id": 2
+    },
+    {
+      "doenca": "aaa7777",
+      "contagio": "bbb",
+      "leva_a_obito": "ccc",
+      "socorro": "ddd",
+      "medicamento": "eee",
+      "localidade": "fff3333",
+      "data": "2023-06-10T15:31:21.459Z",
+      "id": 3
+    },
+    {
+      "doenca": "aaa7777888",
+      "contagio": "bbb",
+      "leva_a_obito": "ccc",
+      "socorro": "ddd",
+      "medicamento": "eee",
+      "localidade": "fff333388888",
+      "data": "2023-06-10T22:09:00.072Z",
+      "id": 4
+    }
+  ]
+}

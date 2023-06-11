@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CadastradoService } from './service/cadastrado.service';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'controle-doencas-app';
-
-  dados: any;
-
-  cadastro($event: any) {
-    console.log($event);
-    this.dados = $event;
-  }
+  title = 'controleDoc';
+  constructor(private service: CadastradoService) {}
 }

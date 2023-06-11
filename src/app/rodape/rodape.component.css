@@ -1,0 +1,24 @@
+footer {
+  background-color: #0077B6;
+  height: 53px;
+  width: 100%;
+  /* max-width: 1200px; */
+  /* Defina o valor desejado para a largura máxima */
+  bottom: 0;
+  position: absolute;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+span {
+  margin-right: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 36px;
+}
+
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "controle-doencas-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
