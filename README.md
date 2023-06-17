@@ -1,5 +1,15 @@
 # ControleDoencasApp
 
+Figma:
+Informar o link compartilhável para o referido projeto no README.md do repositório:
+  \src\assets\controle_doencas_figma\controleDoencas.fig
+
+  ou em:
+
+  (<https://www.figma.com/file/Ic3EmqlxEY73UzVz18HHWG/controleDoencas?type=design&node-id=7%3A14&t=CIo2pmdvdcptwzRV-1>)
+
+  Para testar: abra o terminal cmd, dentro do diretório \controle-doencas-app\dados, execute: json-server --watch db.json <enter>, agora, na raiz do projeto, em um novo terminal cmd, execute: ng s <enter>.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
 ## Development server

@@ -1,3 +1,25 @@
 <!DOCTYPE html>
-<app-cadastro (aocadastrar)="cadastro($event)"></app-cadastro>
-<app-display [dados]="dados"></app-display>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a routerLink="display" routerLinkActive="ativo">Doenças</a>
+      </div>
+      <app-cabecalho></app-cabecalho>
+      <div>
+        <a routerLink="cadastro" routerLinkActive="ativo">Cadastro</a>
+      </div>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <footer>
+      <app-rodape></app-rodape>
+    </footer>
+  </body>
+</html>

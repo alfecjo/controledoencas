@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary: #367c9c;
+  --primary: #03045e;
   --secundary: #132a13;
   --padding: 15px;
   --cinza: #405040;
@@ -9,6 +9,9 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
