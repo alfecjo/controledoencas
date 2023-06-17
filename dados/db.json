@@ -1,3 +1,14 @@
 {
-  "cadastrados": []
+  "cadastrados": [
+    {
+      "doenca": "aaaaa",
+      "contagio": "aaaa",
+      "leva_a_obito": "aaa",
+      "socorro": "aaa",
+      "medicamento": "aaaaa",
+      "localidade": "aaaa",
+      "data": "2023-06-17T23:52:53.227Z",
+      "id": 1
+    }
+  ]
 }
