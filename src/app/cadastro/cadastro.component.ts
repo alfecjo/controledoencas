@@ -68,6 +68,15 @@ export class CadastroComponent {
       this.medicamento = this.dados.medicamento;
       this.localidade = this.dados.localidade;
     });
+
+    if (this.id != null) {
+      this.validarDoenca();
+      this.validarContagio();
+      this.validarLeva_a_Obito();
+      this.validarSocorro();
+      this.validarMedicamento();
+      this.validarLocalidade();
+    }
   }
 
   cadastrar() {

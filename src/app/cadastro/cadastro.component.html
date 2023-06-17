@@ -19,7 +19,7 @@
             id="doenca"
             [(ngModel)]="doenca"
             name="doenca"
-            (input)="validarDoenca()"
+            (ngModelChange)="validarDoenca()"
           />
           <div class="form-field__mensagem-erro" *ngIf="mostrarErroDoenca">
             {{ mensagemErroDoenca }}
@@ -36,7 +36,7 @@
             id="contagio"
             [(ngModel)]="contagio"
             name="contagio"
-            (input)="validarContagio()"
+            (ngModelChange)="validarContagio()"
           />
           <div class="form-field__mensagem-erro" *ngIf="mostrarErroContagio">
             {{ mensagemErroContagio }}
@@ -53,7 +53,7 @@
             id="leva_a_obito"
             [(ngModel)]="leva_a_obito"
             name="leva_a_obito"
-            (input)="validarLeva_a_Obito()"
+            (ngModelChange)="validarLeva_a_Obito()"
           />
           <div
             class="form-field__mensagem-erro"
@@ -73,7 +73,7 @@
             id="Socorro"
             [(ngModel)]="socorro"
             name="socorro"
-            (input)="validarSocorro()"
+            (ngModelChange)="validarSocorro()"
           />
           <div class="form-field__mensagem-erro" *ngIf="mostrarErroSocorro">
             {{ mensagemErroSocorro }}
@@ -90,7 +90,7 @@
             id="Medicamento"
             [(ngModel)]="medicamento"
             name="medicamento"
-            (input)="validarMedicamento()"
+            (ngModelChange)="validarMedicamento()"
           />
           <div class="form-field__mensagem-erro" *ngIf="mostrarErroMedicamento">
             {{ mensagemErroMedicamento }}
@@ -105,7 +105,7 @@
             id="Localidade"
             [(ngModel)]="localidade"
             name="localidade"
-            (input)="validarLocalidade()"
+            (ngModelChange)="validarLocalidade()"
           />
           <div class="form-field__mensagem-erro" *ngIf="mostrarErroLocalidade">
             {{ mensagemErroLocalidade }}
