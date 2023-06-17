@@ -4,62 +4,129 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Controle de doenças</title>
   </head>
   <body>
     <section class="container">
-      <form (ngSubmit)="cadastrar()">
-        <div>
-          <label for="doenca">Doença</label>
-          <input type="text" id="doenca" [(ngModel)]="doenca" name="doenca" />
-        </div>
-        <div>
-          <label for="contagio">Contágio</label>
+      <form class="formulario" (ngSubmit)="cadastrar()">
+        <h2 class="formulario__titulo">Cadastro</h2>
+        <div class="form-field">
+          <label class="form-field__label" for="doenca">Doença:</label>
           <input
+            class="form-field__input"
             type="text"
+            placeholder="Informe a doença em questão..."
+            id="doenca"
+            [(ngModel)]="doenca"
+            name="doenca"
+            (input)="validarDoenca()"
+          />
+          <div class="form-field__mensagem-erro" *ngIf="mostrarErroDoenca">
+            {{ mensagemErroDoenca }}
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-field__label" for="contagio"
+            >Tipo de contágio:</label
+          >
+          <input
+            class="form-field__input"
+            type="text"
+            placeholder="Informe a forma mais comum que induz contágio..."
             id="contagio"
             [(ngModel)]="contagio"
             name="contagio"
+            (input)="validarContagio()"
           />
+          <div class="form-field__mensagem-erro" *ngIf="mostrarErroContagio">
+            {{ mensagemErroContagio }}
+          </div>
         </div>
-        <div>
-          <label for="leva_a_obito">Leva a óbito</label>
+        <div class="form-field">
+          <label class="form-field__label" for="leva_a_obito"
+            >Pode levar a óbito:</label
+          >
           <input
+            class="form-field__input"
             type="text"
+            placeholder="Informe se as condições de agravamento encerram em óbito..."
             id="leva_a_obito"
             [(ngModel)]="leva_a_obito"
             name="leva_a_obito"
+            (input)="validarLeva_a_Obito()"
           />
+          <div
+            class="form-field__mensagem-erro"
+            *ngIf="mostrarErroLeva_a_Obito"
+          >
+            {{ mensagemErroLeva_a_Obito }}
+          </div>
         </div>
-        <div>
-          <label for="socorro">Primeiros socorros</label>
+        <div class="form-field">
+          <label class="form-field__label" for="socorro"
+            >Ação para primeiros socorros:</label
+          >
           <input
+            class="form-field__input"
             type="text"
+            placeholder="Informe medidas de contingência e iniciativas de salvamento..."
             id="Socorro"
             [(ngModel)]="socorro"
             name="socorro"
+            (input)="validarSocorro()"
           />
+          <div class="form-field__mensagem-erro" *ngIf="mostrarErroSocorro">
+            {{ mensagemErroSocorro }}
+          </div>
         </div>
-        <div>
-          <label for="medicamento">Medicamentos administrados</label>
+        <div class="form-field">
+          <label class="form-field__label" for="medicamento"
+            >Medicamentos utilizados:</label
+          >
           <input
+            class="form-field__input"
             type="text"
+            placeholder="Informe princípio ativo das drogas e paleativos iniciais..."
             id="Medicamento"
             [(ngModel)]="medicamento"
             name="medicamento"
+            (input)="validarMedicamento()"
           />
+          <div class="form-field__mensagem-erro" *ngIf="mostrarErroMedicamento">
+            {{ mensagemErroMedicamento }}
+          </div>
         </div>
-        <div>
-          <label for="localidade">Localidade</label>
+        <div class="form-field">
+          <label class="form-field__label" for="localidade">Localidade:</label>
           <input
+            class="form-field__input"
             type="text"
+            placeholder="Informe a região demográfica casualística..."
             id="Localidade"
             [(ngModel)]="localidade"
             name="localidade"
+            (input)="validarLocalidade()"
           />
+          <div class="form-field__mensagem-erro" *ngIf="mostrarErroLocalidade">
+            {{ mensagemErroLocalidade }}
+          </div>
         </div>
-        <div>
-          <button id="cadastrar" type="submit">Cadastrar</button>
+        <div class="botao-wrapper">
+          <button
+            class="botao"
+            id="cadastrar"
+            type="submit"
+            [disabled]="
+              cadastrarDisabledDoenca ||
+              cadastrarDisabledContagio ||
+              cadastrarDisabledLeva_a_Obito ||
+              cadastrarDisabledSocorro ||
+              cadastrarDisabledMedicamento ||
+              cadastrarDisabledLocalidade
+            "
+          >
+            Cadastrar
+          </button>
         </div>
       </form>
     </section>
