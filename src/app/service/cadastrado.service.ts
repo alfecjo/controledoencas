@@ -36,27 +36,27 @@ export class CadastradoService {
     return this.httpClient.put<Cadastrado>(url, cadastrado);
   }
 
-  // excluir(id: number): Observable<Cadastrado> {
-  //   const url = `${this.url}/${id}`;
-  //   console.log('EXCLUIR: ' + url);
-  //   return this.httpClient.delete<Cadastrado>(url);
-  // }
-
-  excluir(id: number): Promise<Cadastrado> {
+  excluir(id: number): Observable<Cadastrado> {
     const url = `${this.url}/${id}`;
     console.log('EXCLUIR: ' + url);
-    return new Promise((resolve, reject) => {
-      this.httpClient.delete<Cadastrado>(url)
-        .subscribe(
-          (response) => {
-            resolve(response);
-          },
-          (error) => {
-            reject(error);
-          }
-        );
-    });
+    return this.httpClient.delete<Cadastrado>(url);
   }
+
+  // excluir(id: number): Promise<Cadastrado> {
+  //   const url = `${this.url}/${id}`;
+  //   console.log('EXCLUIR: ' + url);
+  //   return new Promise((resolve, reject) => {
+  //     this.httpClient.delete<Cadastrado>(url)
+  //       .subscribe(
+  //         (response) => {
+  //           resolve(response);
+  //         },
+  //         (error) => {
+  //           reject(error);
+  //         }
+  //       );
+  //   });
+  // }
 
   buscarDoencaPorId(id: number): Observable<Cadastrado> {
     const url = `${this.url}/${id}`;

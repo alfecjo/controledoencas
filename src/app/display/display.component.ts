@@ -28,35 +28,35 @@ export class DisplayComponent {
     this.router.navigateByUrl('/cadastro/' + Id);
   }
 
-  // openConfirmaDialog(Id: number): void {
-  //   const confirmDelete = confirm(
-  //     'Tem certeza de que deseja excluir esta ficha?'
-  //   );
-  //   if (confirmDelete) {
-  //     if (Id) {
-  //       this.service.excluir(Id).subscribe(() => {
-  //         this.ngOnInit();
-  //       });
-  //     }
-  //     alert('ID da ficha, "EXCLUIDA"!: ' + Id);
-  //   }
-  // }
-
-  openConfirmaDialog(Id: number) {
+  openConfirmaDialog(Id: number): void {
     const confirmDelete = confirm(
       'Tem certeza de que deseja excluir esta ficha?'
     );
     if (confirmDelete) {
-      this.service
-        .excluir(Id)
-        .then((response: Cadastrado) => {
-          console.log('Registro excluído:', response);
+      if (Id) {
+        this.service.excluir(Id).subscribe(() => {
           this.ngOnInit();
-          alert('ID da ficha, "EXCLUIDA"!: ' + Id);
-        })
-        .catch((error: any) => {
-          console.error('Erro ao excluir:', error);
         });
+      }
+      alert('ID da ficha, "EXCLUIDA"!: ' + Id);
     }
   }
+
+  // openConfirmaDialog(Id: number) {
+  //   const confirmDelete = confirm(
+  //     'Tem certeza de que deseja excluir esta ficha?'
+  //   );
+  //   if (confirmDelete) {
+  //     this.service
+  //       .excluir(Id)
+  //       .then((response: Cadastrado) => {
+  //         console.log('Registro excluído:', response);
+  //         this.ngOnInit();
+  //         alert('ID da ficha, "EXCLUIDA"!: ' + Id);
+  //       })
+  //       .catch((error: any) => {
+  //         console.error('Erro ao excluir:', error);
+  //       });
+  //   }
+  // }
 }
