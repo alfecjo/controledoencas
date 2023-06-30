@@ -8,5 +8,13 @@ import { CadastradoService } from './service/cadastrado.service';
 })
 export class AppComponent {
   title = 'controleDoc';
+  autor: any;
+
   constructor(private service: CadastradoService) {}
+
+  recebeValor($event: any) {
+    this.autor = JSON.stringify($event.valorEmitir);
+
+    console.log('autor...' + this.autor);
+  }
 }

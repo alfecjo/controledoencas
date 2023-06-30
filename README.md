@@ -4,7 +4,7 @@ Figma:
 Informar o link compartilhável para o referido projeto no README.md do repositório:
   \src\assets\controle_doencas_figma\controleDoencas.fig
 
-  ou em:
+  ou em :
 
   (<https://www.figma.com/file/Ic3EmqlxEY73UzVz18HHWG/controleDoencas?type=design&node-id=7%3A14&t=CIo2pmdvdcptwzRV-1>)
 
